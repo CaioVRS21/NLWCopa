@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background-color: #121214;
+    background-image: url(../media/BCkazul.svg);
+    background-position-x: center;
+    background-position-y: 55.6%;
+}
+
+#app{
+    width: fit-content;
+    margin:52px auto;
+}
+
+header{
+    margin-bottom: 63px;
+}
+
+.card{
+    padding: 32px 23px;
+    margin-bottom: 32px;
+    text-align: center;
+    background: #1D1C19;
+    border-bottom: 2px solid #F7DD43;
+    border-radius: 6px;
+}
+
+.card h2{
+    border: 1px solid #746615;
+    padding: 8px 16px;
+    color: #F7DD43;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 24px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card span{
+    color: white;
+    font-size: 14px;
+}
+
+ul li{
+    border: 1px solid red;
+    border-radius: 6px;
+    margin: 49px auto;
+    padding: 8px 16px;
+}
