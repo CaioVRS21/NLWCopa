@@ -36,25 +36,52 @@ header{
 
 .card h2{
     border: 1px solid #746615;
+    border-radius: 6px;
     padding: 8px 16px;
     color: #F7DD43;
-    font-family: 'Roboto';
+    font-family: "Roboto", Arial, sans-serif;;
     font-weight: bold;
     font-size: 24px;
     display: flex;
     gap: 16px;
     justify-content: center;
     align-items: center;
+    margin-inline: auto;
+    margin-bottom: 53px;
+    width: fit-content;
+    height: fit-content;
 }
 
 .card span{
-    color: white;
+    color: #E1E1E6;
     font-size: 14px;
+    text-transform: uppercase;
 }
 
-ul li{
-    border: 1px solid red;
-    border-radius: 6px;
-    margin: 49px auto;
+.card ul{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.card ul li{
     padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:37.5px;
+    
+}
+
+.card ul li + li{
+    padding-top: 24px;
+    border-top:1px solid #323238;
+}
+
+.card ul li strong{
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 36px;
+    line-height: 125%;
+    color: #E1E1E6;
 }
