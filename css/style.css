@@ -5,6 +5,30 @@
     box-sizing: border-box;
 }
 
+@keyframes appear{
+    0% {
+        transform:  translateY(-50px);
+        opacity: 0;
+    }
+
+    100%{
+       transform:  translateY(0px);
+        opacity: 1;
+    }
+}
+
+:root{
+    --color-primary: #F7DD43;
+    --color-text-primary:#F7DD43;
+    --title-border-color: #746615;
+}
+
+body.blue{
+    --color-primary: #338AF3;
+    --color-text-primary:#F7DD43;
+    --title-border-color: #338AF3;
+}
+
 ul{
     list-style: none;
 }
@@ -13,7 +37,7 @@ body{
     background-color: #121214;
     background-image: url(../media/BCkazul.svg);
     background-position-x: center;
-    background-position-y: -715px;
+    background-repeat: no-repeat;
 }
 
 body *{
@@ -22,7 +46,8 @@ body *{
 
 #app{
     width: fit-content;
-    margin:52px auto;
+    margin: auto;
+    padding-top: 52px;
 }
 
 header{
@@ -40,15 +65,15 @@ header{
     padding: 32px 23px;
     text-align: center;
     background: #1D1C19;
-    border-bottom: 2px solid #F7DD43;
+    border-bottom: 2px solid var(--color-primary);
     border-radius: 6px;
 }
 
 .card h2{
-    border: 1px solid #746615;
+    border: 1px solid var(--title-border-color);
     border-radius: 6px;
     padding: 8px 16px;
-    color: #F7DD43;
+    color: var(--color-text-primary);
     font-weight: bold;
     font-size: 24px;
     display: flex;
@@ -94,3 +119,31 @@ header{
     line-height: 125%;
     color: #E1E1E6;
 }
+
+.card h2:hover,
+.card ul li img:hover,
+.card ul li strong:hover{
+    transform: scale(1.1);
+}
+
+.card h2,
+.card ul li img,
+.card ul li strong{
+    transition: transform 0.5s;
+}
+
+.card{
+    opacity: 0;
+    animation: appear 2s forwards;
+}
+
+@media (min-width: 700px){
+    #cards{
+        flex-direction: row;
+        max-width: 717,16px;
+        flex-wrap: wrap;
+    }
+    .card{
+        margin: 0 auto;
+    }
+}   
